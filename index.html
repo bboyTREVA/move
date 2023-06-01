@@ -14,11 +14,8 @@
       <div class="toggle"></div>
     </header>
   
-  <video src="./images/15052637131777.MP4" autoplay loop muted playsinline
-  style="object-fit: cover;"></video>
-
-  <!-- 再生・停止ボタンの追加 -->
-  <button id="videoToggle">Play/Pause</button>
+  <video src="./images/RPReplay_Final1682098225.mov" autoplay loop
+  muted></video>
 
   <div class="overlay"></div>
   <div class="text">
@@ -39,32 +36,20 @@
     <li><a href="">Home</a></li>
     <li><a href="">Contact</a></li>
     <li><a href="">Works</a></li>
-    <li><a href="">Vibes</a></li>
+    <li><a href="https://main--mellow-bombolone-d0372b.netlify.app/">Blog</a></li>
   </ul>
 </div>
 <script>
   const menuToggle = document.querySelector(".toggle");
   const showcase = document.querySelector(".showcase");
 
-  // 再生・停止ボタンとビデオ要素を取得
-  const videoToggle = document.getElementById("videoToggle");
-  const video = document.querySelector("video");
-
   menuToggle.addEventListener("click", function() {
     /* activeにする。*/ 
     menuToggle.classList.toggle("active");
     showcase.classList.toggle("active");
-  })
 
-  // 再生・停止ボタンのクリックイベントリスナーを追加
-  videoToggle.addEventListener("click", function () {
-    // 動画が再生中なら停止し、停止中なら再生する
-    if (video.paused) {
-      video.play();
-    } else {
-      video.pause();
-    }
-  });
+    
+  })
 </script>
 </body>
 </html>
