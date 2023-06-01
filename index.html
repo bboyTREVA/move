@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>ENGINEER-BBOY TREVA's Portfolio</title>
+</head>
+<body>
+  <section class="showcase">
+    <header>
+      <h1 class="logo">TREVA's Portfolio</h1>
+      <div class="toggle"></div>
+    </header>
+  
+  <video src="./images/15052637131777.MP4" autoplay loop muted playsinline
+  style="object-fit: cover;"></video>
+
+  <!-- 再生・停止ボタンの追加 -->
+  <button id="videoToggle">Play/Pause</button>
+
+  <div class="overlay"></div>
+  <div class="text">
+    <h2>BBOY - ENGINEER</h2>
+    <h3>TREVA a.k.a. RYO WATANABE</h3>
+    <p>I love to make something interesting with IT. Let's enjoy our life.</p>
+    <a href="#">Get it on</a>
+  </div>
+  <ul class="social">
+    <li><a href="#"><img src="./images/facebook.png" alt=""></a></li>
+    <li><a href="https://twitter.com/RTonya1112"><img src="./images/twitter.png" alt=""></a></li>
+    <li><a href="https://www.instagram.com/toryo_treva/"><img src="./images/instagram.png" alt=""></a></li>
+  </ul>
+</section>
+
+<div class="menu">
+  <ul>
+    <li><a href="">Home</a></li>
+    <li><a href="">Contact</a></li>
+    <li><a href="">Works</a></li>
+    <li><a href="">Vibes</a></li>
+  </ul>
+</div>
+<script>
+  const menuToggle = document.querySelector(".toggle");
+  const showcase = document.querySelector(".showcase");
+
+  // 再生・停止ボタンとビデオ要素を取得
+  const videoToggle = document.getElementById("videoToggle");
+  const video = document.querySelector("video");
+
+  menuToggle.addEventListener("click", function() {
+    /* activeにする。*/ 
+    menuToggle.classList.toggle("active");
+    showcase.classList.toggle("active");
+  })
+
+  // 再生・停止ボタンのクリックイベントリスナーを追加
+  videoToggle.addEventListener("click", function () {
+    // 動画が再生中なら停止し、停止中なら再生する
+    if (video.paused) {
+      video.play();
+    } else {
+      video.pause();
+    }
+  });
+</script>
+</body>
+</html>
